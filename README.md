@@ -1,1 +1,1 @@
-# smartai
+# Setup Next Js Project
