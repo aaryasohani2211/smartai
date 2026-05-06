@@ -7,17 +7,17 @@ const Contact = () => {
     {
       icon: <FiMail />,
       label: 'Email',
-      value: 'arya.sohani@example.com', // Placeholder, user can update
-      href: 'mailto:arya.sohani@example.com',
+      value: 'aryasohani2211@gmail.com',
+      href: 'mailto:aryasohani2211@gmail.com',
       color: 'text-purple-500'
     },
-    {
-      icon: <FiPhone />,
-      label: 'Phone',
-      value: '+91 0000000000', // Placeholder
-      href: 'tel:+910000000000',
-      color: 'text-blue-500'
-    },
+    // {
+    //   icon: <FiPhone />,
+    //   label: 'Phone',
+    //   value: '+91 0000000000', // Placeholder
+    //   href: 'tel:+910000000000',
+    //   color: 'text-blue-500'
+    // },
     {
       icon: <FiMapPin />,
       label: 'Location',
@@ -28,8 +28,8 @@ const Contact = () => {
     {
       icon: <FiLinkedin />,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/arya-sohani',
-      href: 'https://linkedin.com/in/arya-sohani',
+      value: 'linkedin.com/in/aryasohani22',
+      href: 'https://linkedin.com/in/aryasohani22',
       color: 'text-cyan-500'
     }
   ];
@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <SectionWrapper id="contact">
       <div className="text-center mb-16">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,7 +51,7 @@ const Contact = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        
+
         {/* Left Side: Contact Cards */}
         <div className="space-y-6">
           {contactInfo.map((info, i) => (
@@ -93,21 +93,21 @@ const Contact = () => {
         >
           {/* Form Background Accent */}
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent-secondary/10 blur-[80px] rounded-full" />
-          
+
           <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-text-secondary ml-1">Your Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   placeholder="John Doe"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent-primary/50 focus:border-accent-primary transition-all placeholder:text-white/20"
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-text-secondary ml-1">Email Address</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   placeholder="john@example.com"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent-secondary/50 focus:border-accent-secondary transition-all placeholder:text-white/20"
                 />
@@ -116,7 +116,7 @@ const Contact = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-semibold text-text-secondary ml-1">Message</label>
-              <textarea 
+              <textarea
                 rows="5"
                 placeholder="Hi Arya, I'm interested in working with you on..."
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent-primary/50 focus:border-accent-primary transition-all placeholder:text-white/20 resize-none"

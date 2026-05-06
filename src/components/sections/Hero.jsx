@@ -27,9 +27,9 @@ const Hero = () => {
     <div onMouseMove={handleMouseMove} className="relative overflow-hidden min-h-screen flex items-center pt-20">
       <SectionWrapper id="hero" className="w-full !py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
+
           {/* Left Side: Content */}
-          <motion.div 
+          <motion.div
             style={{ x: useTransform(dx, [-300, 300], [-10, 10]), y: useTransform(dy, [-300, 300], [-10, 10]) }}
             className="space-y-10 z-10"
           >
@@ -55,7 +55,7 @@ const Hero = () => {
               >
                 Arya <span className="glow-text">Sohani</span>
               </motion.h1>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -76,13 +76,45 @@ const Hero = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-text-secondary text-lg max-w-xl leading-relaxed"
               >
-                AIML graduate focused on building intelligent automation systems, 
-                LLM workflows, and scalable AI-powered applications. 
+                AIML graduate focused on building intelligent automation systems,
+                LLM workflows, and scalable AI-powered applications.
                 Transforming complex data into actionable intelligence.
               </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="flex flex-wrap gap-4"
+              >
+                {/* View Projects Button */}
+                <button
+                  onClick={() =>
+                    document.getElementById("projects")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="btn-primary group"
+                >
+                  View Projects
+                  <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+
+                {/* Contact Button */}
+                <button
+                  onClick={() =>
+                    document.getElementById("contact")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="btn-secondary"
+                >
+                  Contact Me
+                </button>
+              </motion.div>
             </div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -95,7 +127,7 @@ const Hero = () => {
               <button className="btn-secondary">
                 Contact Me
               </button>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0 }}
@@ -104,16 +136,17 @@ const Hero = () => {
               className="flex items-center gap-6 text-2xl text-text-secondary"
             >
               {[
-                { icon: <FiGithub />, href: "#", label: "GitHub" },
-                { icon: <FiLinkedin />, href: "#", label: "LinkedIn" },
-                { icon: <FiCode />, href: "#", label: "LeetCode" },
-                { icon: <FiMail />, href: "#", label: "Email" }
+                { icon: <FiGithub />, href: "https://github.com/aryasohani", label: "GitHub" },
+                { icon: <FiLinkedin />, href: "https://www.linkedin.com/in/aryasohani22", label: "LinkedIn" },
+                { icon: <FiCode />, href: "https://leetcode.com/u/Aryas2211/", label: "LeetCode" },
+                { icon: <FiMail />, href: "aryasohani2211@gmail.com", label: "Email" }
               ].map((social, i) => (
-                <a 
-                  key={i} 
-                  href={social.href} 
+                <a
+                  key={i}
+                  href={social.href}
                   className="hover:text-accent-secondary transition-colors duration-300"
                   aria-label={social.label}
+                  target="_blank"
                 >
                   {social.icon}
                 </a>
@@ -145,7 +178,7 @@ const Hero = () => {
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 opacity-30"
-                style={{ 
+                style={{
                   backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
                   backgroundSize: '20px 20px'
                 }}
@@ -157,14 +190,13 @@ const Hero = () => {
               <motion.div
                 key={i}
                 animate={{ rotate: 360 }}
-                transition={{ 
-                  duration: 8 + i * 4, 
-                  repeat: Infinity, 
-                  ease: "linear" 
+                transition={{
+                  duration: 8 + i * 4,
+                  repeat: Infinity,
+                  ease: "linear"
                 }}
-                className={`absolute rounded-full border border-white/10 ${
-                  i === 0 ? 'w-64 h-64' : i === 1 ? 'w-80 h-80' : 'w-[400px] h-[400px]'
-                }`}
+                className={`absolute rounded-full border border-white/10 ${i === 0 ? 'w-64 h-64' : i === 1 ? 'w-80 h-80' : 'w-[400px] h-[400px]'
+                  }`}
               >
                 <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-accent-secondary shadow-[0_0_10px_#00D4FF]`} />
               </motion.div>

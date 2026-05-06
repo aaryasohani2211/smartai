@@ -38,21 +38,19 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 ${
-        isScrolled ? 'py-4' : 'py-8'
-      }`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 ${isScrolled ? 'py-4' : 'py-8'
+        }`}
     >
       <div className="max-w-7xl mx-auto">
-        <div 
-          className={`relative flex items-center justify-between px-6 py-3 rounded-2xl transition-all duration-500 ${
-            isScrolled 
-              ? 'bg-bg-card/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]' 
-              : 'bg-transparent border-transparent'
-          }`}
+        <div
+          className={`relative flex items-center justify-between px-6 py-3 rounded-2xl transition-all duration-500 ${isScrolled
+            ? 'bg-bg-card/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]'
+            : 'bg-transparent border-transparent'
+            }`}
         >
           {/* Logo */}
-          <motion.a 
+          <motion.a
             href="#hero"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -66,7 +64,7 @@ const Navbar = () => {
             {navLinks.map((link, index) => {
               const sectionId = link.name.toLowerCase() === 'home' ? 'home' : link.name.toLowerCase();
               const isActive = activeSection === sectionId;
-              
+
               return (
                 <motion.a
                   key={link.name}
@@ -74,14 +72,13 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${
-                    isActive ? 'text-accent-secondary' : 'text-text-secondary hover:text-white'
-                  }`}
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 ${isActive ? 'text-accent-secondary' : 'text-text-secondary hover:text-white'
+                    }`}
                   onClick={() => setActiveSection(sectionId)}
                 >
                   {link.name}
                   {isActive && (
-                    <motion.div 
+                    <motion.div
                       layoutId="nav-underline"
                       className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent-primary to-accent-secondary shadow-[0_0_8px_rgba(0,212,255,0.8)]"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
@@ -93,7 +90,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA & Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -106,7 +103,31 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.button>
 
-            <button 
+            <button
+              className="lg:hidden p-2 text-text-primary hover:text-accent-secondary transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
+            </button>
+          </div> */}
+          <div className="flex items-center gap-4">
+            <motion.a
+              href="/Arya_Sohani.pdf"
+              download="Arya_Sohani.pdf"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-glass flex items-center gap-2 group overflow-hidden relative"
+            >
+              <span className="relative z-10">Resume</span>
+
+              <FiDownload className="relative z-10 group-hover:translate-y-1 transition-transform duration-300" />
+
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </motion.a>
+
+            <button
               className="lg:hidden p-2 text-text-primary hover:text-accent-secondary transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -128,7 +149,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className="fixed inset-0 bg-black/60 backdrop-blur-sm lg:hidden z-[-1]"
             />
-            
+
             {/* Drawer */}
             <motion.div
               initial={{ x: '100%' }}
@@ -160,11 +181,11 @@ const Navbar = () => {
                 ))}
               </div>
 
-              <div className="mt-auto pt-8 border-t border-white/5">
+              {/* <div className="mt-auto pt-8 border-t border-white/5">
                 <button className="btn-primary w-full py-4 text-lg">
                   Hire Me
                 </button>
-              </div>
+              </div> */}
             </motion.div>
           </>
         )}
