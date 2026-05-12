@@ -660,7 +660,7 @@ const ProjectCard = ({ project, index }) => {
             </div>
 
             {/* CTA row */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <button
                 onClick={(e) => { e.stopPropagation(); window.open(project.github, '_blank'); }}
                 style={{
@@ -705,7 +705,7 @@ const ProjectCard = ({ project, index }) => {
                 <FiExternalLink size={13} /> Live Demo
               </button>
 
-              {/* Arrow badge */}
+              {/* Arrow badge 
               <div
                 style={{
                   marginLeft: 'auto',
@@ -721,7 +721,7 @@ const ProjectCard = ({ project, index }) => {
               >
                 <FiArrowUpRight size={16} color="#fff" />
               </div>
-            </div>
+            </div> */}
           </motion.div>
         )}
       </AnimatePresence>

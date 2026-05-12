@@ -201,19 +201,6 @@
     border-radius: 9999px;
   }
 
-  .mouse-follower {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 2rem;
-    height: 2rem;
-    border: 2px solid var(--color-accent-secondary);
-    border-radius: 9999px;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.075s;
-  }
 }
 
 @layer utilities {

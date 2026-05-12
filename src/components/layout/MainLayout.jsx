@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollProgress from '../common/ScrollProgress';
 import Background from '../common/Background';
-import MouseFollower from '../common/MouseFollower';
 
 const MainLayout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -73,7 +72,6 @@ const MainLayout = ({ children }) => {
         )}
       </AnimatePresence>
 
-      <MouseFollower />
       <ScrollProgress />
       <Background />
 
