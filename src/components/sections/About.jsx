@@ -47,7 +47,7 @@ const About = () => {
   return (
     <SectionWrapper id="about">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
+
         {/* Left Side: Text Content */}
         <div className="space-y-6">
           <motion.div
@@ -69,10 +69,10 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-text-secondary leading-relaxed text-justify"
           >
-            Arya Sohani is an <span className="text-white font-semibold">AI/ML Engineer</span> specializing in intelligent automation, 
-            machine learning systems, and LLM-powered applications. With hands-on experience in 
-            workflow automation, deep learning, LangChain, OpenAI APIs, and scalable AI solutions, 
-            Arya focuses on solving real-world problems using modern AI technologies.
+            I'm an <span className="text-white font-semibold">AI/ML Engineer</span> specializing in intelligent automation,
+            machine learning systems, and LLM-powered applications. With hands-on experience in
+            workflow automation, deep learning, LangChain, OpenAI APIs, and scalable AI solutions,
+            I focus on solving real-world problems using modern AI technologies.
           </motion.p>
 
           <motion.div
@@ -97,7 +97,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
           {/* Decorative Background Glow */}
           <div className="absolute inset-0 bg-accent-primary/5 blur-[100px] rounded-full -z-10" />
-          
+
           {skills.map((skill, i) => (
             <motion.div
               key={skill.title}
@@ -106,7 +106,7 @@ const About = () => {
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.8 }}
               variants={cardVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -10,
                 transition: { duration: 0.2 }
               }}
@@ -114,15 +114,15 @@ const About = () => {
             >
               {/* Card Hover Border Glow */}
               <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none -z-10" />
-              
+
               <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-2xl bg-gradient-to-br ${skill.color} text-white shadow-lg shadow-black/20`}>
                 {skill.icon}
               </div>
-              
+
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-secondary transition-colors">
                 {skill.title}
               </h3>
-              
+
               <p className="text-sm text-text-secondary leading-relaxed">
                 {skill.description}
               </p>
