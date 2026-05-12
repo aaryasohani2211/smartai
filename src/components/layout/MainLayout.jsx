@@ -76,7 +76,7 @@ const MainLayout = ({ children }) => {
       <MouseFollower />
       <ScrollProgress />
       <Background />
-      
+
       <div className={isLoading ? 'hidden' : 'block'}>
         <Navbar />
         <main className="relative z-10">
