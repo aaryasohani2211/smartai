@@ -408,6 +408,30 @@ const projects = [
     liveLink: 'https://github.com/aryasohani/YOLO-Hand_Detection',
     number: '06',
   },
+  {
+    id: 7,
+    title: 'SmartStore AI — Inventory Intelligence',
+    subtitle: 'AI-Powered SaaS · Vendor & Stock Automation',
+    tech: [
+      'FastAPI',
+      'PostgreSQL',
+      'Redis',
+      'OpenAI',
+      'OCR',
+      'APScheduler',
+      'SQLAlchemy',
+      'JWT'
+    ],
+    description:
+      'Production-grade AI inventory and vendor management platform with automated stock tracking, OCR invoice parsing, smart demand forecasting, AI-powered insights, and real-time supplier analytics. Built with scalable FastAPI architecture and cloud PostgreSQL integration.',
+    image: './smart.png',
+    accent: '#6366f1', // indigo — AI + enterprise systems
+    accentDim: 'rgba(99,102,241,0.12)',
+    accentBorder: 'rgba(99,102,241,0.35)',
+    github: 'https://github.com/aryasohani/Inventory',
+    liveLink: 'https://github.com/aryasohani/Inventory',
+    number: '07',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────
