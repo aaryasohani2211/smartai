@@ -329,8 +329,8 @@ const projects = [
     accent: '#22c55e',          // green — plant/nature
     accentDim: 'rgba(34,197,94,0.12)',
     accentBorder: 'rgba(34,197,94,0.35)',
-    github: 'https://github.com',
-    liveLink: 'https://example.com',
+    github: 'https://github.com/aryasohani/Plant-Leave-Disease-Detection',
+    liveLink: 'https://github.com/aryasohani/Plant-Leave-Disease-Detection',
     number: '01',
   },
   {
@@ -344,8 +344,8 @@ const projects = [
     accent: '#a78bfa',          // violet — creative/AI
     accentDim: 'rgba(167,139,250,0.12)',
     accentBorder: 'rgba(167,139,250,0.35)',
-    github: 'https://github.com',
-    liveLink: 'https://example.com',
+    github: 'https://github.com/aryasohani/Generative-AI-for-Interior-Design',
+    liveLink: 'https://github.com/aryasohani/Generative-AI-for-Interior-Design',
     number: '02',
   },
   {
@@ -359,8 +359,8 @@ const projects = [
     accent: '#06b6d4',          // cyan — tech/audio
     accentDim: 'rgba(6,182,212,0.12)',
     accentBorder: 'rgba(6,182,212,0.35)',
-    github: 'https://github.com',
-    liveLink: 'https://example.com',
+    github: 'https://github.com/aryasohani/Speech_to_image',
+    liveLink: 'https://github.com/aryasohani/Speech_to_image',
     number: '03',
   },
   {
@@ -374,8 +374,8 @@ const projects = [
     accent: '#f59e0b',          // amber — gaming/fun
     accentDim: 'rgba(245,158,11,0.12)',
     accentBorder: 'rgba(245,158,11,0.35)',
-    github: 'https://github.com',
-    liveLink: 'https://example.com',
+    github: 'https://github.com/aryasohani/chatgame',
+    liveLink: 'https://github.com/aryasohani/chatgame',
     number: '04',
   },
   {
@@ -389,8 +389,8 @@ const projects = [
     accent: '#38bdf8',          // sky — medical/clean
     accentDim: 'rgba(56,189,248,0.12)',
     accentBorder: 'rgba(56,189,248,0.35)',
-    github: 'https://github.com',
-    liveLink: 'https://example.com',
+    github: 'https://github.com/aryasohani/Dr_Bot-Automation',
+    liveLink: 'https://github.com/aryasohani/Dr_Bot-Automation',
     number: '05',
   },
   {
@@ -404,8 +404,8 @@ const projects = [
     accent: '#f43f5e',          // rose — detection/precision
     accentDim: 'rgba(244,63,94,0.12)',
     accentBorder: 'rgba(244,63,94,0.35)',
-    github: 'https://github.com',
-    liveLink: 'https://example.com',
+    github: 'https://github.com/aryasohani/YOLO-Hand_Detection',
+    liveLink: 'https://github.com/aryasohani/YOLO-Hand_Detection',
     number: '06',
   },
 ];
