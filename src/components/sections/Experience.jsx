@@ -7,7 +7,7 @@ const Experience = () => {
     {
       company: 'AlphaNexis Tech Pvt Ltd',
       role: 'AI Automation & BDE Intern',
-      duration: 'Jan 2026 – Present',
+      duration: 'Jan 2026 – April 2026',
       responsibilities: [
         'Designed automation workflows using n8n and REST APIs',
         'Conducted stakeholder meetings',
